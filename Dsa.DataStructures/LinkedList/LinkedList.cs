@@ -1,0 +1,141 @@
+﻿namespace Dsa.DataStructures.LinkedList
+{
+    public sealed class Node<T>
+    {
+        public T? Value { get; set; }
+
+        public Node<T>? Next { get; set; }
+    }
+
+    public sealed class LinkedList<T>
+    {
+        public int Length { get; set; } = 0;
+
+        public Node<T>? Head { get; set; }
+
+        public void Prepend(T item)
+        {
+            var node = new Node<T> { Value = item };
+
+            if (this.Head == null)
+            {
+                this.Head = node;
+                this.Length++;
+                return;
+            }
+
+            var prevHead = this.Head;
+            this.Head = node;
+            node.Next = prevHead;
+            this.Length++;
+        }
+
+        public void InsertAt(T item, int index)
+        {
+            if (this.Length < index)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            var node = new Node<T> { Value = item };
+            var currentNode = this.Head;
+
+            for (var i = 0; i < index; i++)
+            {
+                currentNode = currentNode.Next;
+            }
+
+            var nextNode = currentNode.Next;
+            currentNode.Next = node;
+            node.Next = nextNode;
+        }
+
+        public void Append(T item)
+        {
+            var node = new Node<T> { Value = item };
+            var currentNode = this.Head;
+            
+            if (this.Head == null)
+            {
+                this.Head = node;
+                this.Length++;
+                return;
+            }
+
+            for (var i = 1; i < this.Length; i++)
+            {
+                currentNode = currentNode.Next;
+            }
+
+            currentNode.Next = node;
+            this.Length++;
+        }
+
+        public T? Remove(T item)
+        {
+            var currentNode = this.Head;
+
+            if (currentNode.Value.Equals(item))
+            {
+                this.Head = currentNode.Next;
+                currentNode.Next = null;
+                this.Length--;
+
+                return currentNode.Value;
+            }
+
+            for (var i = 1; i < this.Length; i++)
+            {
+                if (currentNode.Next.Value.Equals(item))
+                {
+                    currentNode.Next = currentNode.Next.Next;
+                    return currentNode.Value;
+                }
+                currentNode = currentNode.Next;
+            }
+
+            this.Length--;
+            return default;
+        }
+
+        public T? Get(int index)
+        {
+            if (index < 0 || index >= this.Length)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            var currentNode = this.Head;
+
+            for (var i = 0; i < index; i++)
+            {
+                currentNode = currentNode.Next;
+            }
+
+            return currentNode.Value;
+        }
+
+        public T? RemoveAt(int index)
+        {
+            var currentNode = this.Head;
+
+            if (index == 0)
+            {
+                this.Head = currentNode.Next;
+                currentNode.Next = null;
+                this.Length--;
+                return currentNode.Value;
+            }
+
+            for (var i = 0; i < index; i++)
+            {
+                currentNode = currentNode.Next;
+            }
+
+            this.Head = currentNode.Next;
+            currentNode.Next = null;
+            this.Length--;
+            return currentNode.Value;
+        }
+    }
+}
