@@ -40,7 +40,7 @@
             var node = new Node<T> { Value = item };
             var currentNode = this.Head;
 
-            for (var i = 0; i < index; i++)
+            for (var i = 0; i < index - 1; i++)
             {
                 currentNode = currentNode.Next;
             }
@@ -48,6 +48,7 @@
             var nextNode = currentNode.Next;
             currentNode.Next = node;
             node.Next = nextNode;
+            this.Length++;
         }
 
         public void Append(T item)
@@ -127,15 +128,16 @@
                 return currentNode.Value;
             }
 
-            for (var i = 0; i < index; i++)
+            for (var i = 0; i < index - 1; i++)
             {
                 currentNode = currentNode.Next;
             }
 
-            this.Head = currentNode.Next;
-            currentNode.Next = null;
+            var nextNodeToBeDeleted = currentNode.Next;
+            currentNode.Next = nextNodeToBeDeleted.Next;
+            nextNodeToBeDeleted.Next = null;
             this.Length--;
-            return currentNode.Value;
+            return nextNodeToBeDeleted.Value;
         }
     }
 }
