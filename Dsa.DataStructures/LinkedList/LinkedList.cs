@@ -2,11 +2,17 @@
 {
     public sealed class Node<T>
     {
+        public static Node<T> Create(T item) => new() { Value = item };
+        
         public T? Value { get; set; }
 
         public Node<T>? Next { get; set; }
     }
 
+    /// <summary>
+    /// Singly linked list. Time complexity: O(n).
+    /// </summary>
+    /// <typeparam name="T">The homogeneous type to be stored.</typeparam>
     public sealed class LinkedList<T>
     {
         public int Length { get; set; } = 0;
@@ -90,12 +96,12 @@
                 if (currentNode.Next.Value.Equals(item))
                 {
                     currentNode.Next = currentNode.Next.Next;
+                    this.Length--;
                     return currentNode.Value;
                 }
                 currentNode = currentNode.Next;
             }
 
-            this.Length--;
             return default;
         }
 
