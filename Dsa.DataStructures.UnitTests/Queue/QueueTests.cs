@@ -1,7 +1,6 @@
 ﻿namespace Dsa.DataStructures.UnitTests.Queue
 {
     using Dsa.DataStructures.Queue;
-    using FluentAssertions;
 
     public sealed class QueueTests
     {

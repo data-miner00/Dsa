@@ -1,7 +1,6 @@
 namespace Dsa.Algorithms.UnitTests
 {
     using Dsa.Algorithms;
-    using FluentAssertions;
 
     public sealed class TwoCrystalBallsTests
     {

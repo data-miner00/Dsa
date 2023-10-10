@@ -1,8 +1,6 @@
 ﻿namespace Dsa.DataStructures.UnitTests.Stack
 {
     using Dsa.DataStructures.Stack;
-    using Xunit;
-    using FluentAssertions;
 
     public sealed class StackTests
     {
