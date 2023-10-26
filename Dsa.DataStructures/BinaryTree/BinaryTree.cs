@@ -10,10 +10,12 @@
     }
 
     /// <summary>
-    /// Depth-first search on a binary tree.
+    /// Operations on a binary tree.
     /// </summary>
-    public static class BinaryTree
+    public static partial class BinaryTree
     {
+        // Depth-first search
+        // DFS preserves structure.
         private static Queue<T> WalkPreOrder<T>(BinaryNode<T>? current, Queue<T> path)
         {
             if (current == null)
