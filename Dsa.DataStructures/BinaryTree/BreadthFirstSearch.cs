@@ -7,8 +7,13 @@
     /// </summary>
     public static partial class BinaryTree
     {
-        // Breadth-first search
-        // BFS does NOT preserves structure.
+        /// <summary>
+        /// Breadth-first search through a binary tree. BFS does NOT preserve the tree structure.
+        /// </summary>
+        /// <typeparam name="T">The type of the item.</typeparam>
+        /// <param name="head">The head of the tree.</param>
+        /// <param name="needle">The value to find.</param>
+        /// <returns>Boolean indicating whether the element was found or not.</returns>
         public static bool BreadthFirstSearch<T>(BinaryNode<T> head, T needle)
         {
             var queue = new Queue<BinaryNode<T>>();

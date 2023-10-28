@@ -1,21 +1,44 @@
 ﻿namespace Dsa.DataStructures.BinaryTree
 {
-    public sealed class BinaryNode<T>
-    {
-        public T? Value { get; set; }
-
-        public BinaryNode<T>? Left { get; set; }
-
-        public BinaryNode<T>? Right { get;set; }
-    }
-
     /// <summary>
     /// Operations on a binary tree.
     /// </summary>
     public static partial class BinaryTree
     {
-        // Depth-first search
-        // DFS preserves structure.
+        /// <summary>
+        /// Pre-order DFS through a binary tree.
+        /// </summary>
+        /// <typeparam name="T">The type of the item.</typeparam>
+        /// <param name="head">The head of the binary tree.</param>
+        /// <returns>The result of the traversal.</returns>
+        public static IEnumerable<T> PreOrderTraversal<T>(BinaryNode<T> head)
+        {
+            return WalkPreOrder(head, new Queue<T>()).AsEnumerable();
+        }
+
+        /// <summary>
+        /// In-order DFS through a binary tree.
+        /// </summary>
+        /// <typeparam name="T">The type of the item.</typeparam>
+        /// <param name="head">The head of the binary tree.</param>
+        /// <returns>The result of the traversal.</returns>
+        public static IEnumerable<T> InOrderTraversal<T>(BinaryNode<T> head)
+        {
+
+            return WalkInOrder(head, new Queue<T>()).AsEnumerable();
+        }
+
+        /// <summary>
+        /// Post-order DFS through a binary tree.
+        /// </summary>
+        /// <typeparam name="T">The type of the item.</typeparam>
+        /// <param name="head">The head of the binary tree.</param>
+        /// <returns>The result of the traversal.</returns>
+        public static IEnumerable<T> PostOrderTraversal<T>(BinaryNode<T> head)
+        {
+            return WalkPostOrder(head, new Queue<T>()).AsEnumerable();
+        }
+
         private static Queue<T> WalkPreOrder<T>(BinaryNode<T>? current, Queue<T> path)
         {
             if (current == null)
@@ -68,22 +91,6 @@
             // Post
             path.Enqueue(current.Value);
             return path;
-        }
-
-        public static IEnumerable<T> PreOrderTraversal<T>(BinaryNode<T> head)
-        {
-            return WalkPreOrder(head, new Queue<T>()).AsEnumerable();
-        }
-
-        public static IEnumerable<T> InOrderTraversal<T>(BinaryNode<T> head)
-        {
-
-            return WalkInOrder(head, new Queue<T>()).AsEnumerable();
-        }
-
-        public static IEnumerable<T> PostOrderTraversal<T>(BinaryNode<T> head)
-        {
-            return WalkPostOrder(head, new Queue<T>()).AsEnumerable();
         }
     }
 }
