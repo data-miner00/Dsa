@@ -1,16 +1,5 @@
 ﻿namespace Dsa.DataStructures.DoublyLinkedList
 {
-    public sealed class Node<T>
-    {
-        public static Node<T> Create(T item) => new() { Value = item };
-
-        public T? Value { get; set; }
-
-        public Node<T>? Next { get; set; }
-
-        public Node<T>? Prev { get; set; }
-    }
-    
     /// <summary>
     /// Doubly linked list. Time complexity: O(n).
     /// </summary>
@@ -101,6 +90,7 @@
                 {
                     break;
                 }
+
                 currentNode = currentNode.Next;
             }
 
@@ -109,7 +99,7 @@
             {
                 return default;
             }
-            
+
             return this.RemoveNode(currentNode);
         }
 

@@ -1,12 +1,5 @@
 ﻿namespace Dsa.DataStructures.Stack
 {
-    public sealed class Node<T>
-    {
-        public T? Value { get; set; }
-
-        public Node<T>? Previous { get; set; }
-    }
-
     public sealed class Stack<T>
     {
         public uint Length { get; set; } = 0;

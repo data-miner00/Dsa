@@ -1,14 +1,5 @@
 ﻿namespace Dsa.DataStructures.LinkedList
 {
-    public sealed class Node<T>
-    {
-        public static Node<T> Create(T item) => new() { Value = item };
-        
-        public T? Value { get; set; }
-
-        public Node<T>? Next { get; set; }
-    }
-
     /// <summary>
     /// Singly linked list. Time complexity: O(n).
     /// </summary>
@@ -61,7 +52,7 @@
         {
             var node = new Node<T> { Value = item };
             var currentNode = this.Head;
-            
+
             if (this.Head == null)
             {
                 this.Head = node;
