@@ -1,8 +1,10 @@
 ﻿namespace Dsa.DataStructures.Heap
 {
+    using System;
+
     /// <summary>
     /// The basic implementation of the minimum heap.
-    /// TODO: Add MaxHeap & HeapifyIterative methods.
+    /// MinHeap usages: Priority queue.
     /// </summary>
     /// <typeparam name="T">The type of the data.</typeparam>
     public sealed class MinHeap<T>
@@ -99,11 +101,6 @@
 
         private void HeapifyDownRecurse(int index)
         {
-            if (index >= this.Length)
-            {
-                return;
-            }
-
             var leftIndex = LeftChildIndex(index);
             var rightIndex = RightChildIndex(index);
 
