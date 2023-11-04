@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.Algorithms", "Dsa.Algor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.Algorithms.UnitTests", "Dsa.Algorithms.UnitTests\Dsa.Algorithms.UnitTests.csproj", "{A6B710BD-D463-4522-96CE-9E6D1AF92FEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsa.Recursion", "Dsa.Recursion\Dsa.Recursion.csproj", "{CA0A545C-93DB-43D9-B7C0-844BBD6C8548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.Recursion", "Dsa.Recursion\Dsa.Recursion.csproj", "{CA0A545C-93DB-43D9-B7C0-844BBD6C8548}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{88143D8E-1DEB-4B19-8D07-54A30C7EF443}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +50,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7360F935-C577-49E4-9927-5740E69C6978} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
+		{A6B710BD-D463-4522-96CE-9E6D1AF92FEE} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {660F84B6-62D9-4D2A-90A6-642205295886}
