@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.Recursion", "Dsa.Recurs
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{88143D8E-1DEB-4B19-8D07-54A30C7EF443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsa.TestCore", "Dsa.TestCore\Dsa.TestCore.csproj", "{D46245B3-4C53-4536-A43B-A4E14028755A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.TestCore", "Dsa.TestCore\Dsa.TestCore.csproj", "{D46245B3-4C53-4536-A43B-A4E14028755A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsa.Recursion.UnitTests", "Dsa.Recursion.UnitTests\Dsa.Recursion.UnitTests.csproj", "{9DD7CC15-B20B-4A75-B80A-CEEF4250FC02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{D46245B3-4C53-4536-A43B-A4E14028755A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D46245B3-4C53-4536-A43B-A4E14028755A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D46245B3-4C53-4536-A43B-A4E14028755A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DD7CC15-B20B-4A75-B80A-CEEF4250FC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD7CC15-B20B-4A75-B80A-CEEF4250FC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD7CC15-B20B-4A75-B80A-CEEF4250FC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD7CC15-B20B-4A75-B80A-CEEF4250FC02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{7360F935-C577-49E4-9927-5740E69C6978} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
 		{A6B710BD-D463-4522-96CE-9E6D1AF92FEE} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
 		{D46245B3-4C53-4536-A43B-A4E14028755A} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
+		{9DD7CC15-B20B-4A75-B80A-CEEF4250FC02} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {660F84B6-62D9-4D2A-90A6-642205295886}
