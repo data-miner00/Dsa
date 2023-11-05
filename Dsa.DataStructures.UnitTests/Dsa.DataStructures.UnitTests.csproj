@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dsa.DataStructures\Dsa.DataStructures.csproj" />
+    <ProjectReference Include="..\Dsa.TestCore\Dsa.TestCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>

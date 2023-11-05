@@ -1,6 +1,8 @@
 ﻿namespace Dsa.DataStructures.UnitTests.Heap
 {
-    [TestCaseOrderer("Dsa.DataStructures.UnitTests.PriorityOrderer", "Dsa.DataStructures.UnitTests")]
+    using Dsa.TestCore;
+
+    [TestCaseOrderer("Dsa.TestCore.PriorityOrderer", "Dsa.TestCore")]
     public sealed class MaxHeapTests : IClassFixture<MaxHeapFixture>
     {
         private readonly MaxHeapFixture fixture;

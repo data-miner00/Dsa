@@ -1,4 +1,4 @@
-﻿namespace Dsa.DataStructures.UnitTests
+﻿namespace Dsa.TestCore
 {
     ﻿using System;
     ﻿using System.Collections.Generic;
@@ -6,8 +6,12 @@
     ﻿using Xunit.Abstractions;
     ﻿using Xunit.Sdk;
 
+    /// <summary>
+    /// The priority orderer that is used by xUnit to run the test in sequence.
+    /// </summary>
     ﻿public class PriorityOrderer : ITestCaseOrderer
     {
+        /// <inheritdoc/>
         public IEnumerable<TTestCase> OrderTestCases<TTestCase>(IEnumerable<TTestCase> testCases) where TTestCase : ITestCase
         {
             var sortedMethods = new SortedDictionary<int, List<TTestCase>>();
@@ -30,11 +34,12 @@
             }
         }
 
-        static TValue GetOrCreate<TKey, TValue>(IDictionary<TKey, TValue> dictionary, TKey key) where TValue : new()
+        private static TValue GetOrCreate<TKey, TValue>(IDictionary<TKey, TValue> dictionary, TKey key) where TValue : new()
         {
-            TValue result;
-
-            if (dictionary.TryGetValue(key, out result)) return result;
+            if (dictionary.TryGetValue(key, out TValue result))
+            {
+                return result;
+            }
 
             result = new TValue();
             dictionary[key] = result;

@@ -1,6 +1,8 @@
 ﻿namespace Dsa.DataStructures.UnitTests.Trie
 {
-    [TestCaseOrderer("Dsa.DataStructures.UnitTests.PriorityOrderer", "Dsa.DataStructures.UnitTests")]
+    using Dsa.TestCore;
+
+    [TestCaseOrderer("Dsa.TestCore.PriorityOrderer", "Dsa.TestCore")]
     public sealed class TrieTests : IClassFixture<TrieTestFixture>
     {
         private readonly TrieTestFixture fixture;
