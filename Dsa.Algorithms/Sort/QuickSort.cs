@@ -5,6 +5,15 @@
     /// </summary>
     public static class QuickSort
     {
+        /// <summary>
+        /// Sort an array with Quick Sort.
+        /// </summary>
+        /// <param name="numbers">The integer array to be sorted.</param>
+        public static void Sort(int[] numbers)
+        {
+            Qs(numbers, 0, numbers.Length - 1);
+        }
+
         private static void Qs(int[] arr, int lo, int hi)
         {
             if (lo >= hi)
@@ -40,11 +49,6 @@
             arr[idx] = pivot;
 
             return idx;
-        }
-        
-        public static void Sort(int[] numbers)
-        {
-            Qs(numbers, 0, numbers.Length - 1);
         }
     }
 }

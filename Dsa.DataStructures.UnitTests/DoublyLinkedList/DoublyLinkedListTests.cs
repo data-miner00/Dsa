@@ -19,8 +19,8 @@
             list.Get(1).Should().Be(2);
             list.Get(2).Should().Be(1);
 
-            list.Head.Value.Should().Be(3);
-            list.Tail.Value.Should().Be(1);
+            list.Head!.Value.Should().Be(3);
+            list.Tail!.Value.Should().Be(1);
         }
 
         [Fact]
@@ -38,8 +38,8 @@
             list.Get(1).Should().Be(2);
             list.Get(2).Should().Be(3);
 
-            list.Head.Value.Should().Be(1);
-            list.Tail.Value.Should().Be(3);
+            list.Head!.Value.Should().Be(1);
+            list.Tail!.Value.Should().Be(3);
         }
 
         [Fact]
@@ -66,8 +66,8 @@
             list.Get(4).Should().Be(4);
             list.Get(5).Should().Be(5);
 
-            list.Head.Value.Should().Be(1);
-            list.Tail.Value.Should().Be(5);
+            list.Head!.Value.Should().Be(1);
+            list.Tail!.Value.Should().Be(5);
         }
 
         [Fact]
@@ -93,8 +93,8 @@
             list.Get(2).Should().Be(4);
             list.Get(3).Should().Be(5);
 
-            list.Head.Value.Should().Be(1);
-            list.Tail.Value.Should().Be(5);
+            list.Head!.Value.Should().Be(1);
+            list.Tail!.Value.Should().Be(5);
         }
 
         [Fact]
@@ -120,8 +120,8 @@
             list.Get(2).Should().Be(4);
             list.Get(3).Should().Be(5);
 
-            list.Head.Value.Should().Be(1);
-            list.Tail.Value.Should().Be(5);
+            list.Head!.Value.Should().Be(1);
+            list.Tail!.Value.Should().Be(5);
         }
     }
 }

@@ -4,8 +4,18 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public sealed class BreadthFirstSearch
+    /// <summary>
+    /// Searching through a graph with BFS.
+    /// </summary>
+    public static class BreadthFirstSearch
     {
+        /// <summary>
+        /// Search through the graph with BFS strategy.
+        /// </summary>
+        /// <param name="matrix">The adjacency matrix that represents the graph.</param>
+        /// <param name="source">The source of the node to begin the search.</param>
+        /// <param name="needle">The target item to be searched.</param>
+        /// <returns>An array of ints representing the paths went through. Empty if item not found.</returns>
         public static int[] Search(int[][] matrix, int source, int needle)
         {
             var seen = new bool[matrix.Length];

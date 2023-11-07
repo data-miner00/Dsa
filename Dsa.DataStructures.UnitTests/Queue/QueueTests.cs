@@ -15,7 +15,7 @@
 
             queue.Peek().Should().Be(1);
             queue.Length.Should().Be(3);
-            queue.Tail.Value.Should().Be(3);
+            queue.Tail!.Value.Should().Be(3);
         }
 
         [Fact]
@@ -30,7 +30,7 @@
 
             queue.Dequeue().Should().Be(1);
             queue.Peek().Should().Be(2);
-            queue.Tail.Value.Should().Be(4);
+            queue.Tail!.Value.Should().Be(4);
             queue.Length.Should().Be(3);
         }
     }

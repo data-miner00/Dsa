@@ -6,6 +6,13 @@
     /// </summary>
     public static class BinarySearch
     {
+        /// <summary>
+        /// Search wheather the stack contains the needle.
+        /// </summary>
+        /// <typeparam name="T">Any type of object.</typeparam>
+        /// <param name="haystack">The original array.</param>
+        /// <param name="needle">The item to be searched.</param>
+        /// <returns>A boolean indicating found or not.</returns>
         public static bool IsContains<T>(this T[] haystack, T needle)
             where T : IComparable<T>
         {
@@ -14,9 +21,9 @@
 
             do
             {
-                var midpoint = Convert.ToInt32(Math.Floor((double)lo + (hi - lo) / 2));
+                var midpoint = Convert.ToInt32(Math.Floor((double)lo + ((hi - lo) / 2)));
                 var currentElem = haystack[midpoint];
-                
+
                 if (currentElem.Equals(needle))
                 {
                     return true;
@@ -29,7 +36,8 @@
                 {
                     lo = midpoint + 1;
                 }
-            } while (lo < hi);
+            }
+            while (lo < hi);
 
             return false;
         }

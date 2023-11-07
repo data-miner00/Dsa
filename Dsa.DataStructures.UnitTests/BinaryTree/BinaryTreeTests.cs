@@ -21,7 +21,7 @@
 
             var actual = BinaryTree.PreOrderTraversal(this.fixture.Tree1);
 
-            actual.ToArray().Should().BeEquivalentTo(expected);
+            actual.Should().BeEquivalentTo(expected);
         }
 
         [Fact]
@@ -31,7 +31,7 @@
 
             var actual = BinaryTree.InOrderTraversal(this.fixture.Tree1);
 
-            actual.ToArray().Should().BeEquivalentTo(expected);
+            actual.Should().BeEquivalentTo(expected);
         }
 
         [Fact]
@@ -41,7 +41,7 @@
 
             var actual = BinaryTree.PostOrderTraversal(this.fixture.Tree1);
 
-            actual.ToArray().Should().BeEquivalentTo(expected);
+            actual.Should().BeEquivalentTo(expected);
         }
     }
 }

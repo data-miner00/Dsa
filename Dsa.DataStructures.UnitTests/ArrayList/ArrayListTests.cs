@@ -26,7 +26,7 @@
         public void Append_ItemShouldInsertedAtBack()
         {
             var list = new ArrayList<int>();
-            
+
             list.Append(1);
             list.Append(2);
             list.Capacity.Should().Be(2);
