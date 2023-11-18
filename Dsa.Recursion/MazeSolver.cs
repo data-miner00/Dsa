@@ -1,7 +1,7 @@
 ﻿namespace Dsa.Recursion
 {
     using System.Drawing;
-    
+
     public class MazeSolver
     {
         private static readonly Point[] Dir = new[]
