@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModulePaths>
+  <Exclude>
+   <ModulePath>.*TestCore\.*</ModulePath>
+   <ModulePath>.*UnitTests\..*</ModulePath>
+  </Exclude>
+</ModulePaths>
+
