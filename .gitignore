@@ -151,6 +151,11 @@ coverage*.info
 *.coverage
 *.coveragexml
 
+# Report Generator coverage
+coverage.corbetura.xml
+TestResults
+coveragereport
+
 # NCrunch
 _NCrunch_*
 .*crunch*.local.xml
