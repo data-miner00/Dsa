@@ -65,29 +65,124 @@
             node.Right = new BinaryNode<T> { Value = value };
         }
 
-        // TODO: Implement deletion
-        public static void Delete<T>(BinaryNode<T>? node, T value)
+        /// <summary>
+        /// Deletes the node and returns the root reference.
+        /// Implementation excerpted from <see href="https://www.geeksforgeeks.org/deletion-in-binary-search-tree/">Geeks</see>.
+        /// </summary>
+        /// <typeparam name="T">Type that is comparable.</typeparam>
+        /// <param name="node">The head of BST.</param>
+        /// <param name="value">The value to find and delete.</param>
+        /// <returns>The root reference.</returns>
+        public static BinaryNode<T>? Delete<T>(BinaryNode<T>? node, T value)
             where T : IComparable<T>
         {
+            // 1. If the node is null, do nothing and return.
             if (node == null)
             {
-                return;
+                return node;
             }
 
-            if (node.Value.Equals(value) && node.Right != null)
+            // 2. Traverse left if target is lesser than current,
+            // traverse right if target is larger than current.
+            if (value.CompareTo(node.Value) < 0)
             {
-                
-                
+                node.Left = Delete(node.Left, value);
+                return node;
             }
-            else if (node.Left != null && node.Left.Left == null && node.Left.Right == null && node.Left.Value.Equals(value))
+            else if (value.CompareTo(node.Value) > 0)
             {
-                node.Left = null;
+                node.Right = Delete(node.Right, value);
+                return node;
             }
-            else if (node.Right != null && node.Right.Left == null && node.Right.Right == null && node.Right.Value.Equals(value))
+
+            // 3. If one of the children is empty
+            if (node.Left is null)
             {
-                node.Right = null;
+                return node.Right; // if right is empty, it is fine too
             }
-            
+            else if (node.Right is null)
+            {
+                return node.Left;
+            }
+            else
+            {
+                // 4. If both children exists, go to the leftmost children of the current right
+                // child
+                var parent = node;
+                var succ = node.Right;
+
+                while (succ.Left is not null)
+                {
+                    parent = succ;
+                    succ = succ.Left;
+                }
+
+                if (parent != node)
+                {
+                    parent.Left = succ.Right;
+                }
+                else
+                {
+                    parent.Right = succ.Right;
+                }
+
+                node.Value = succ.Value;
+
+                return node;
+            }
+        }
+
+        /// <summary>
+        /// Delete the node if found and return the deleted node.
+        /// </summary>
+        /// <typeparam name="T">Type that is comparable.</typeparam>
+        /// <param name="node">The head of BST.</param>
+        /// <param name="value">The value to find and delete.</param>
+        /// <returns>The deleted node.</returns>
+        public static BinaryNode<T>? DeleteInplace<T>(BinaryNode<T>? node, T value)
+            where T : IComparable<T>
+        {
+            return DeleteInplace(node, value, null);
+        }
+
+        public static BinaryNode<T>? DeleteInplace<T>(BinaryNode<T>? node, T value, BinaryNode<T> parent)
+            where T : IComparable<T>
+        {
+            if (node is null)
+            {
+                return node;
+            }
+
+            if (node.Value.CompareTo(value) > 0)
+            {
+                return DeleteInplace(node.Left, value, node);
+            }
+            else if (node.Value.CompareTo(value) < 0)
+            {
+                return DeleteInplace(node.Right, value, node);
+            }
+
+            var immediateParent = node;
+            var pointer = node.Right;
+
+            while (pointer.Left is not null)
+            {
+                immediateParent = pointer;
+                pointer = pointer.Left;
+            }
+
+            var leftNodeToBeRelocated = immediateParent.Left;
+
+            if (immediateParent == node) // if left is null and right got elem
+            {
+                immediateParent.Left = pointer.Right;
+            }
+
+            leftNodeToBeRelocated.Left = node.Left;
+            leftNodeToBeRelocated.Right = node.Right;
+            parent.Right = leftNodeToBeRelocated;
+
+            return node;
         }
     }
 }
