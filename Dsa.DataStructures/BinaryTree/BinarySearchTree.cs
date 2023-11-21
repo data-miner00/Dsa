@@ -68,6 +68,7 @@
         /// <summary>
         /// Deletes the node and returns the root reference.
         /// Implementation excerpted from <see href="https://www.geeksforgeeks.org/deletion-in-binary-search-tree/">Geeks</see>.
+        /// Updated at <see href="https://www.youtube.com/watch?v=LFzAoJJt92M">NeetCodeIO</see>.
         /// </summary>
         /// <typeparam name="T">Type that is comparable.</typeparam>
         /// <param name="node">The head of BST.</param>
@@ -108,25 +109,15 @@
             {
                 // 4. If both children exists, go to the leftmost children of the current right
                 // child
-                var parent = node;
-                var succ = node.Right;
+                var curr = node.Right;
 
-                while (succ.Left is not null)
+                while (curr.Left is not null)
                 {
-                    parent = succ;
-                    succ = succ.Left;
+                    curr = curr.Left;
                 }
 
-                if (parent != node)
-                {
-                    parent.Left = succ.Right;
-                }
-                else
-                {
-                    parent.Right = succ.Right;
-                }
-
-                node.Value = succ.Value;
+                node.Value = curr.Value;
+                node.Right = Delete(node.Right, node.Value);
 
                 return node;
             }
