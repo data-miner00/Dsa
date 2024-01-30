@@ -43,7 +43,6 @@
 
                 node.Value = value;
             }
-
         }
 
         public V? Get(K key)

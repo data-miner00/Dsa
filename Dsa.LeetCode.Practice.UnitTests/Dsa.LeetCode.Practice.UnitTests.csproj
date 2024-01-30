@@ -27,4 +27,8 @@
     <ProjectReference Include="..\Dsa.LeetCode.Practice\Dsa.LeetCode.Practice.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="SonarAnalyzer.CSharp" Version="9.18.0.83559" />
+  </ItemGroup>
+
 </Project>
