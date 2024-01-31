@@ -30,9 +30,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.LeetCode.Practice", "Dsa.LeetCode.Practice\Dsa.LeetCode.Practice.csproj", "{F7CC6AF3-D5DC-4949-B1DB-ADFB39007A1D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.LeetCode.Practice.UnitTests", "Dsa.LeetCode.Practice.UnitTests\Dsa.LeetCode.Practice.UnitTests.csproj", "{02664A80-E3E9-48D9-902C-C620A8B4816F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.LeetCode.UnitTests", "Dsa.LeetCode.UnitTests\Dsa.LeetCode.UnitTests.csproj", "{02664A80-E3E9-48D9-902C-C620A8B4816F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsa.LeetCode.Solution", "Dsa.LeetCode.Solution\Dsa.LeetCode.Solution.csproj", "{5518E345-6329-4AF3-B1B9-EEF53C1491B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.LeetCode.Solution", "Dsa.LeetCode.Solution\Dsa.LeetCode.Solution.csproj", "{5518E345-6329-4AF3-B1B9-EEF53C1491B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +93,7 @@ Global
 		{A6B710BD-D463-4522-96CE-9E6D1AF92FEE} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
 		{D46245B3-4C53-4536-A43B-A4E14028755A} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
 		{9DD7CC15-B20B-4A75-B80A-CEEF4250FC02} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
+		{02664A80-E3E9-48D9-902C-C620A8B4816F} = {88143D8E-1DEB-4B19-8D07-54A30C7EF443}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {660F84B6-62D9-4D2A-90A6-642205295886}
