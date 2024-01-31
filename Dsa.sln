@@ -30,7 +30,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.LeetCode.Practice", "Dsa.LeetCode.Practice\Dsa.LeetCode.Practice.csproj", "{F7CC6AF3-D5DC-4949-B1DB-ADFB39007A1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsa.LeetCode.Practice.UnitTests", "Dsa.LeetCode.Practice.UnitTests\Dsa.LeetCode.Practice.UnitTests.csproj", "{02664A80-E3E9-48D9-902C-C620A8B4816F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.LeetCode.Practice.UnitTests", "Dsa.LeetCode.Practice.UnitTests\Dsa.LeetCode.Practice.UnitTests.csproj", "{02664A80-E3E9-48D9-902C-C620A8B4816F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsa.LeetCode.Solution", "Dsa.LeetCode.Solution\Dsa.LeetCode.Solution.csproj", "{5518E345-6329-4AF3-B1B9-EEF53C1491B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +80,10 @@ Global
 		{02664A80-E3E9-48D9-902C-C620A8B4816F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02664A80-E3E9-48D9-902C-C620A8B4816F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02664A80-E3E9-48D9-902C-C620A8B4816F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5518E345-6329-4AF3-B1B9-EEF53C1491B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5518E345-6329-4AF3-B1B9-EEF53C1491B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5518E345-6329-4AF3-B1B9-EEF53C1491B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5518E345-6329-4AF3-B1B9-EEF53C1491B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
