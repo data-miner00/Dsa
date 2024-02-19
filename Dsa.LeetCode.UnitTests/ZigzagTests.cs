@@ -1,4 +1,4 @@
-namespace Dsa.LeetCode.Practice.UnitTests
+namespace Dsa.LeetCode.UnitTests
 {
     using Dsa.LeetCode.Practice;
     using ZigzagSln = Dsa.LeetCode.Solution.Zigzag;
