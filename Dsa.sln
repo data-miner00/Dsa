@@ -34,7 +34,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.LeetCode.UnitTests", "D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.LeetCode.Solution", "Dsa.LeetCode.Solution\Dsa.LeetCode.Solution.csproj", "{5518E345-6329-4AF3-B1B9-EEF53C1491B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsa.Benchmarks", "Dsa.Benchmarks\Dsa.Benchmarks.csproj", "{AA5CA172-BC81-4799-9124-86B1748D4B42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.Benchmarks", "Dsa.Benchmarks\Dsa.Benchmarks.csproj", "{AA5CA172-BC81-4799-9124-86B1748D4B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsa.Problems", "Dsa.Problems\Dsa.Problems.csproj", "{5CF28AB8-CE6E-4174-BA10-5727363FA248}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -90,6 +92,10 @@ Global
 		{AA5CA172-BC81-4799-9124-86B1748D4B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA5CA172-BC81-4799-9124-86B1748D4B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA5CA172-BC81-4799-9124-86B1748D4B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF28AB8-CE6E-4174-BA10-5727363FA248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF28AB8-CE6E-4174-BA10-5727363FA248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF28AB8-CE6E-4174-BA10-5727363FA248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF28AB8-CE6E-4174-BA10-5727363FA248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
