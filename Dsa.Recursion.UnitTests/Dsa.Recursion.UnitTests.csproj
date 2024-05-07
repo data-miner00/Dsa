@@ -25,6 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Dsa.Recursion\Dsa.Recursion.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Update="SonarAnalyzer.CSharp" Version="9.18.0.83559" />
   </ItemGroup>
 
