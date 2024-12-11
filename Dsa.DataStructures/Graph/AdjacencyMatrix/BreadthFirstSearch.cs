@@ -16,7 +16,9 @@
         /// <param name="source">The source of the node to begin the search.</param>
         /// <param name="needle">The target item to be searched.</param>
         /// <returns>An array of ints representing the paths went through. Empty if item not found.</returns>
+#pragma warning disable S2368 // Public methods should not have multidimensional array parameters
         public static int[] Search(int[][] matrix, int source, int needle)
+#pragma warning restore S2368 // Public methods should not have multidimensional array parameters
         {
             var seen = new bool[matrix.Length];
             var prev = new int[matrix.Length];
