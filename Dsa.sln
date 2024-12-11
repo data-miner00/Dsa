@@ -24,8 +24,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE15CBAC-CA0C-49D6-9F59-B00F80CD6883}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitignore = .gitignore
 		CodeCoverage.runsettings = CodeCoverage.runsettings
 		Directory.Build.props = Directory.Build.props
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dsa.LeetCode.Practice", "Dsa.LeetCode.Practice\Dsa.LeetCode.Practice.csproj", "{F7CC6AF3-D5DC-4949-B1DB-ADFB39007A1D}"
