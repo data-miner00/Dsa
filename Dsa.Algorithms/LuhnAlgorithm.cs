@@ -69,14 +69,14 @@
         public static bool ValidateV3(string cardNumber)
         {
             int sum = 0;
-            int parity = cardNumber.Length % 2;
+            int parity = (cardNumber.Length - 1) % 2;
             int checkDigit = cardNumber[^1] - '0';
 
-            for (int i = 0; i < cardNumber.Length - 1; i++)
+            for (int i = cardNumber.Length - 2; i >= 0; i--)
             {
                 int digit = cardNumber[i] - '0';
 
-                if (i % 2 != parity)
+                if (i % 2 == parity)
                 {
                     sum += digit;
                 }
@@ -90,7 +90,7 @@
                 }
             }
 
-            return checkDigit == (10 - (sum % 10)) % 10;
+            return checkDigit == 10 - (sum % 10);
         }
     }
 }
